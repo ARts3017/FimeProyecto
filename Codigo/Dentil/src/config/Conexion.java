@@ -8,15 +8,17 @@ import java.sql.SQLException;
 
 public class Conexion {
     
-    Connection con;
+    Connection con=null;
     
-    public Conexion(){ //Constructor 
+    public Connection Conexion(){ //Constructor 
     
         try{
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dentil?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false","root","");
-        }catch(SQLException e){
+             Class.forName("com.mysql.jdbc.Driver");
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/dentil","root","123");
+        }catch(Exception e){
             e.printStackTrace();
         }   
+        return con;
     }
     
     public Connection getConnection(){

@@ -4,10 +4,12 @@ package Login;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import config.Conexion;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import vista.*;
 import java.sql.*;
 import javax.swing.table.DefaultTableModel;
-public class Login extends javax.swing.JFrame {
+public class Login extends javax.swing.JFrame implements ActionListener {
 
     
            ///Para establecer la conexion a la base de datos
@@ -294,4 +296,9 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField txtContraseña;
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
